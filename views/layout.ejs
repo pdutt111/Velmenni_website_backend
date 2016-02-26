@@ -1,0 +1,57 @@
+<!DOCTYPE>
+<html ng-app="velmenniApp">
+<head>
+    <title>Velmenni</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <!-- VideoJs Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="bower_components/video.js/dist/video-js.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <base href="/"></base>
+
+</head>
+<body style="position: relative;" data-target="#navbar" data-spy="scroll">
+<nav class="navbar navbar-default navbar-fixed-top navbar-line" id="navbar" >
+    <div class="container-fluid">
+        <div class="navbar-header" >
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#toggle-navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Velmenni</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-right" id="toggle-navbar">
+            <ul class="nav navbar-nav">
+                <li class=""><a href="/">Home</a></li>
+                <li class=""><a ui-sref="products">Products</a></li>
+                <li class=""><a ui-sref="team">About</a></li>
+                <li class=""><a ui-sref="contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div ui-view>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/video.js/dist/video.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+</div>
+
+
+
+
+
+
+</body>
+</html>

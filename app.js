@@ -8,6 +8,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var config=require('config');
 var log = require('tracer').colorConsole(config.get('log'));
+var views= require('./routes/views');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
@@ -26,7 +27,7 @@ app.use(function(req,res,next){
   }else{
     next();
   }
-})
+});
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -40,6 +41,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/', views);
 app.use('/api/v1', routes);
 app.use('/api/v1/users', users);
 

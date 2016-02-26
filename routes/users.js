@@ -19,7 +19,7 @@ router.post('/contact-us',params({body:['name','email','phonenumber','message']}
       }).done();
 });
 
-router.post('/subscribe',params({body:['email']},{message : config.get('error.badrequest')}),
+router.post('/subscribe', params({body:['email']},{message : config.get('error.badrequest')}),
     function(req, res, next) {
         req.body.source="subscribe";
   formLogic.postSubscribe(req,res)

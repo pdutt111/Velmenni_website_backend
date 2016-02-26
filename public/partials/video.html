@@ -1,0 +1,50 @@
+<div id="mainVideo" class="container-fluid text-center main-body" >				
+	<video id="video-main" data-setup="{}" class="video-js" controls preload="auto" >
+		<source src="assets/video/test.mp4" type="video/mp4">
+	</video>
+</div>
+<div id="dummyVideo" class="hidden"></div>
+
+<div class="container share-this">
+	<h4 style="padding-bottom: 1%">Share this on</h4>
+	<div class="row" >
+		<div class="col-md-6">
+			<a id="fb" href="#"><img src="assets/images/social-icons/fb.png"></a>
+			<a href="https://twitter.com/intent/tweet?text=Check%20Out&url=https://youtu.be/9QAzEKVsjMQ" target="_blank"><img src="assets/images/social-icons/twitter.png"></a>
+			<!-- <a href=""><img src="assets/images/social-icons/utube.png"></a> -->
+			<a href="https://www.linkedin.com/cws/share?url=https://youtu.be/9QAzEKVsjMQ" target="_blank"><img src="assets/images/social-icons/linkedin.png"></a>
+		</div>
+		<div class="col-md-6">
+		</div>				
+	</div>
+</div>
+<script type="text/javascript">
+		// var video = videojs('#video-main');
+		
+		$(window).scroll(function() {    
+			var scroll = $(window).scrollTop();	
+			var width = $('#mainVideo').width();
+			var height = 480;
+	     	if (scroll >= 500 && document.getElementById('mainVideo') != null) {
+	        	$('.video-js').addClass("navbar-video");
+	        	$('.navbar-brand').addClass("hidden");
+	        	$('.navbar').addClass("navbar-resize");
+	        	$('.vjs-big-play-button').addClass("navbar-video-button");
+	        	$('#navbar').removeClass('navbar-line');
+	        	$("#dummyVideo").removeClass("hidden");
+	        	$("#dummyVideo").css({"width":width, "height": height});
+	    	} else {
+	    		$('.video-js').removeClass("navbar-video");
+	        	$('.navbar-brand').removeClass("hidden");
+	        	$('.navbar').removeClass("navbar-resize");
+	        	$('.vjs-big-play-button').removeClass("navbar-video-button");
+	        	$('#navbar').addClass('navbar-line');
+	        	$("#dummyVideo").addClass("hidden");
+	    	}
+		});
+
+		$("#fb").on("click",function(){
+    		var fbpopup = window.open("https://www.facebook.com/sharer/sharer.php?u=https://youtu.be/9QAzEKVsjMQ", "pop", "width=600, height=400, scrollbars=no");
+    	return false;
+		});	
+	</script>
