@@ -8,4 +8,8 @@ var counter=require('../logic/counterLogic');
 router.get('/',function(req,res){
     res.render('layout.ejs');
 });
+
+router.get('/:name',function(req,res){
+    res.render('layout.ejs');
+});
 module.exports = router;
