@@ -19,3 +19,8 @@ app.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
 });
 
 
+app.controller('videoCounter', ['$scope','$http', function($scope,$http){
+	$scope.video = function(videoId) {
+		
+	}
+}])

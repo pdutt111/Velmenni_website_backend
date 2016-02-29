@@ -58,3 +58,29 @@
 	visibility: hidden;
 }
 
+.video-counter{
+	font-weight: bold;
+	font-size: 2em;
+	display: inline;
+	vertical-align: middle;
+}
+
+.total-views{
+	font-size: 70%;
+	display: inline;
+	vertical-align: middle;
+	justify-content: center;
+}
+
+.address {
+	display: inline;
+}
+
+.footer-social-media img{
+	width: 10%;
+}
+
+.site-map{
+	list-style: none;
+	justify-content: center;
+}
