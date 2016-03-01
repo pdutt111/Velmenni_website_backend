@@ -165,6 +165,14 @@ border-radius: 5px;*/
 	vertical-align: middle;
 }
 
+.slick-slide {
+	height: 30%;
+}
+.slider img{
+	width: 50%;
+}
+
+
 
 
 
